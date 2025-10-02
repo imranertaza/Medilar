@@ -1,0 +1,131 @@
+/*=============================
+	03. Button CSS Start
+===============================*/
+/* Theme btn */
+.theme-btn {
+  color: var(--bs-black-color);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 20px 30px;
+  display: inline-flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--bs-border-color);
+  position: relative;
+  z-index: 1;
+
+  &.active{
+    background-color: var(--bs-primary-color);
+    color: var(--bs-white-color);
+    border: inherit;
+  }
+
+  .btn-icon{
+    margin-left:10px;
+  }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      width: 100%;
+      height: 100%;
+      background-color: var(--bs-primary-color);
+      border-radius: 60px;
+      transition: var(--bs-transition);
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &:hover {
+      color: var(--bs-white-color);
+      cursor: pointer;
+          &::before {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+          }
+        }
+}
+
+
+
+
+
+//
+//.theme-btn {
+//  color: var(--bs-white-color);
+//  font-size: 18px;
+//  font-weight: 700;
+//  line-height: 30px;
+//  background-color: var(--bs-primary-color);
+//  padding: 15px 30px 15px 30px;
+//  border-radius: 60px;
+//  z-index: 9;
+//  border: 0;
+//
+//  &::before {
+//    content: "";
+//    position: absolute;
+//    top: 50%;
+//    left: 50%;
+//    transform: translate(-50%, -50%) scale(0);
+//    width: 100%;
+//    height: 100%;
+//    background-color: var(--bs-black-color);
+//    border-radius: 60px;
+//    transition: var(--bs-transition);
+//    z-index: -1;
+//    opacity: 0;
+//  }
+//
+//  .arrow {
+//    margin-left: 10px;
+//    transition: var(--bs-transition);
+//    position: relative;
+//    top: -1px;
+//  }
+//
+//  &:hover {
+//    &::before {
+//      transform: translate(-50%, -50%) scale(1);
+//      opacity: 1;
+//    }
+//  }
+//}
+//
+//.theme-btn-primary {
+//  background-color: var(--bs-primary-color);
+//}
+//
+//
+//.theme-btn-border {
+//  background-color: transparent;
+//  border: 1px solid var(--bs-primary-color);
+//  color: var(--bs-black-color);
+//
+//  &::before {
+//    background-color: var(--bs-primary-color) !important;
+//  }
+//
+//  svg {
+//    path {
+//      transition: var(--bs-transition);
+//      fill: var(--bs-black-color) !important;
+//    }
+//  }
+//
+//  &:hover {
+//    color: var(--bs-white-color);
+//
+//    svg {
+//      path {
+//        fill: var(--bs-white-color) !important;
+//      }
+//    }
+//  }
+//}
