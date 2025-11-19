@@ -4,9 +4,11 @@
 // Header section one
 .cm-header-section {
 	.navbar {
-		.header-one-container{
-			margin-top:30px;
+		z-index: 999;
+		.header-one-container {
+			margin-top: 30px;
 		}
+
 		.navbar-nav {
 			.nav-item {
 				margin: 0 6px;
@@ -71,16 +73,20 @@
 				}
 			}
 		}
-		.search-btn{
+
+		.search-btn {
 			padding: 13px 25px;
 			border-right: 1px solid var(--bs-border-color);
+
 			&:hover {
 				cursor: pointer;
 			}
 		}
-		.mobile-menu-icon{
+
+		.mobile-menu-icon {
 			padding: 13px 25px;
 			margin-right: 15px;
+
 			&:hover {
 				cursor: pointer;
 			}
@@ -121,6 +127,7 @@
 }
 
 .sticky-menu {
+	z-index: 999;
 	background-color: var(--bs-white-color);
 	animation: 400ms ease-in-out 0s normal none 1 running fadeInDown;
 	box-shadow: 0 2px 20px rgba(25, 25, 25, 0.1);
@@ -318,6 +325,20 @@
 	}
 }
 
+@media (max-width: 1380px) and (min-width: 1200px) {
+	.cm-header-section {
+		.navbar {
+			.navbar-nav {
+				.nav-item {
+					.nav-link {
+						font-size: small;
+					}
+				}
+			}
+		}
+	}
+}
+
 @media (max-width:1799.98px) {
 	.ep-header-section-two .navbar::before {
 		width: 25.5%;
@@ -371,13 +392,14 @@
 	.ep-header-section-two .mobile-menu-area .mobile-topbar {
 		padding: 10px 0px;
 	}
-	.ep-header-section-two.sticky-menu .mobile-menu-area{
+
+	.ep-header-section-two.sticky-menu .mobile-menu-area {
 		background-color: var(--bs-white-color) !important;
 	}
 }
 
-@media (max-width: 991.98px) {}
+// @media (max-width: 991.98px) {}
 
-@media (max-width: 767.98px) {}
+// @media (max-width: 767.98px) {}
 
-@media (max-width: 575.98px) {}
+// @media (max-width: 575.98px) {}

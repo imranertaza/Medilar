@@ -1,0 +1,97 @@
+.services-section {
+    padding: 120px 0;
+    background-color: #fff;
+
+    .services-heading {
+        text-align: center;
+        font-size: clamp(24px, 4vw + 1rem, 48px);
+        font-weight: 700;
+        margin-bottom: 3rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 58px;
+        color: var(--bs-black-color);
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .service-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            svg {
+                path {
+                    stroke: var(--bs-white-color);
+                }
+            }
+            .card-icon{
+                background-color: var(--bs-primary-color);
+                svg {
+                    path {
+                        fill: var(--bs-white-color);
+                    }
+                }
+            }
+            .read-more-btn{
+                background-color: var(--bs-primary-color);
+                color: #fff;
+            }
+            transform: translateY(-5px);
+        }
+
+        .card-header-top {
+            display: flex;
+            align-items: center;
+            gap: 1rem; // spacing between items
+            width: 100%;
+        }
+
+        .card-icon {
+            flex: 0 0 80px; // fixed width for icon
+            height: 80px;
+            border-radius: 999px;
+            background: var(--Gray-100, #F2F2F2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-number {
+            flex: 0 0 40px; // fixed width for number
+            font-family: var(--bs-font-secondary);
+            font-size: 27px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 37.8px; /* 140% */
+            letter-spacing: -0.54px;
+            color: var(--bs-paragraph-color);
+        }
+
+        .card-divider {
+            flex-grow: 1;
+            width: auto;
+            height: 3px;
+            background-color: #D0D0D0;
+            border: none;
+            margin: 0 0.5rem;
+        }
+
+
+        .card-title {
+            color: var(--bs-black-color);
+            font-size: clamp(18px, 2vw, 24px);            font-style: normal;
+            font-weight: 600;
+            line-height: 34px;
+            margin: 20px 0 40px 0;
+        }
+    }
+}

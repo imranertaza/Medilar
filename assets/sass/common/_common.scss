@@ -108,7 +108,40 @@ button:focus {
   box-shadow: none;
 }
 
+.read-more-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 20px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid var(--Gray-200, #D0D0D0);
+  color: var(--bs-black-color);
 
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  i{
+    font-size: 12px;
+  }
+
+  &:hover {
+    background-color: var(--bs-primary-color);
+    color: var(--bs-background-color);
+  }
+
+}
+.hover-white:hover {
+  background-color: var(--bs-white-color) !important;
+  color: var(--bs-black-color) !important;
+}
+
+.gap-30{
+gap: 30px;
+}
 ul,
 ol {
   margin: 0;
@@ -142,6 +175,9 @@ p {
   text-shadow: none;
 }
 
+.text-primary {
+  color: var(--bs-primary-color) !important;
+}
 
 /* Section title */
 .section-title-block {
@@ -231,7 +267,7 @@ p {
 }
 
 .pb-120 {
-  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .my-120 {
@@ -251,6 +287,35 @@ p {
   font-weight: 700;
   line-height: 84px;
   letter-spacing: -1.48px;
+}
+
+.heading-style2 {
+  font-size: clamp(24px, 2vw + 1rem, 48px);
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 58px;
+  color: var(--bs-black-color);
+}
+
+.description {
+  color: var(--bs-paragraph-color);
+  font-size: clamp(14px, 2vw, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 162%;
+}
+
+.small-header {
+  color: var(--bs-primary-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17px;
+  /* 121.429% */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 
@@ -309,6 +374,38 @@ p {
   }
 }
 
+.d-card {
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 60px 0px #0000000D;
+  padding: 20px 35px;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-left: 10%;
+
+  .happy-client {
+      justify-content: center;
+      align-items: center;
+
+      p {
+          color: var(--bs-primary-color);
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 48px;
+      }
+
+      span {
+          font-size: 16px;
+          color: var(--bs-paragraph-color);
+      }
+  }
+}
+.d-card{
+  &.cwu{
+    padding: 20px 30px;
+  }
+
+}
 /* Spin animation */
 @keyframes spin {
   from {

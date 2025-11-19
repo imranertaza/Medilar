@@ -1,7 +1,63 @@
 /*=============================
-	03. Banner CSS Start
-===============================*/
+    03. Banner CSS Start
+==============================*/
 /* Banner */
-.cm-banner-section{
-  height: 500px;
+.cm-banner-section {
+  background: #F2F2F2;
+
+  h5 {
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  h2 {
+    margin-top: 37.68px;
+    margin-bottom: 21px;
+    font-size: clamp(32px, 4.5vw + 2rem, 88.186px);
+    font-family: var(--bs-font-secondary);
+    font-style: normal;
+    font-weight: 600;
+    line-height: clamp(32px, 4.5vw + 2rem, 88.186px)
+  } 
+
+  p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    width: 60%;
+  }
+
+  .trusted_client_img {
+    margin-left: -12px !important;
+
+    &:first-child {
+      margin-left: 0 !important;
+    }
+  }
+
+  .total-client {
+    color: var(--Gray-900, #181818);
+    font-feature-settings: 'liga'off, 'clig'off;
+    /* Heading/H3 */
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 34px;
+    /* 141.667% */
+  }
+
+  .trusted_clients_subtitle {
+    color: var(--Gray-600, #666666);
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .cm-banner-section p {
+    width: 100%;
+  }
+  
 }
