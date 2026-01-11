@@ -1,0 +1,205 @@
+.ask-question-section {
+    margin-top: 120px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 120px;
+    }
+
+    .quote-icon {
+        top: -55px; // half of 110px height
+        background-color: var(--bs-primary-color);
+        display: inline-flex;
+        align-items: center;
+        height: 110px;
+        width: 110px;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 30px !important;
+    }
+
+    .testimonial-box {
+        background-color: #F2F2F2;
+        padding: 80px 40px 48px 40px;
+        border-radius: 12px;
+        border: 1px solid #D0D0D0;
+
+        .quote-text {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 100px;
+
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            h5 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            span {
+                font-size: 14px;
+                color: #777;
+            }
+        }
+    }
+
+    .ask-accordion {
+        .accordion-item {
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 999px;
+            // overflow: hidden;
+            /* Using a more subtle box-shadow for a modern feel */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease;
+            background-color: #f8f8f8;
+            /* Light background for the overall item */
+        }
+
+        .accordion-item:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .accordion-button {
+            // background-color: #ffffff;
+            // font-weight: 700;
+            // /* Made slightly bolder for emphasis */
+            // font-size: 18px;
+            // color: #333;
+            // padding: 20px 30px;
+            // /* Reduced top/bottom padding slightly */
+            // box-shadow: none;
+            // /* Ensure no visible inner corners */
+            // text-align: left;
+            // /* Ensure text alignment is left */
+            // display: flex;
+            // align-items: center;
+            // position: relative;
+            // border-radius: 22px;
+            // border-bottom-left-radius: 0px;
+            // border-bottom-right-radius: 0px;
+            background-color: transparent !important;
+        }
+
+        .accordion-header .accordion-button {
+            border-radius: 999px;
+            background-color: #F2F2F2 !important;
+        }
+
+        /* Style for the number circle (01, 02, etc.) */
+        .accordion-button::before {
+            content: attr(data-item-number);
+            min-width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            color: #555;
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 15px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+
+        /* Style for the open accordion item's button (header) */
+        .accordion-button:not(.collapsed) {
+            /* The green border on the left */
+            border: 1px solid var(--bs-primary-color);
+            border-bottom: none;
+            padding-bottom: 0px;
+            border-radius: 0px;
+            background-color: #fff;
+            /* The darker text color for the active header */
+            color: var(--bs-primary-color);
+            box-shadow: none;
+            border-radius: 22px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .accordion-button::after {
+            content: "";
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 16px;
+            margin-left: auto;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        /* Collapsed state */
+        .accordion-button.collapsed::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230A6847'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            background-color: #fff;
+        }
+
+
+        /* Expanded state */
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            background-color: var(--bs-primary-color);
+        }
+
+        /* Ensure the number circle adapts when the button is open */
+        .accordion-button:not(.collapsed)::before {
+            background-color: #f2f2f2;
+            color: var(--bs-primary-color);
+        }
+
+
+        .accordion-body {
+            background-color: #ffffff;
+            padding: 10px 30px 30px 30px;
+            /* Adjusted padding to align with the text in the image */
+            padding-left: calc(35px + 45px);
+            border-radius: 22px;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            /* To align the text with the space after the number (35px + 15px margin + 30px padding) - Adjust as needed */
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .accordion-body:not(.collapsed) {
+            border: 1px solid var(--bs-primary-color);
+            border-top: none;
+        }
+    }
+
+    /* Fix for the extra left margin on the button when not collapsed that the original CSS might miss */
+    .ask-accordion .accordion-button:not(.collapsed) {
+        padding-left: 25px;
+        background-color: #fff !important;
+        /* Adjust padding to account for the 5px border-left */
+    }
+
+    /* Ensure the full width of the button is clickable, overriding default Bootstrap styles */
+    .accordion-button:not(.collapsed) {
+        box-shadow: none;
+    }
+
+    .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
+        border-bottom-left-radius: 999px !important;
+        border-bottom-right-radius: 999px !important;
+    }
+
+}
