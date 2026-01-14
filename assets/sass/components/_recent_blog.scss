@@ -1,18 +1,44 @@
 .recent-blog-section {
+  .row {
+    padding-top: 120px !important;
+
+    .col {
+      @media screen and (max-width: 1200px) {
+        margin-bottom: 120px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (max-width: 760px) {
+        margin-bottom: 180px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
   .custom-card {
     border: none;
-    border-radius: 0.5rem;
-    overflow: hidden;
+    border-radius: 999px;
+
+    .card-image-wrapper {
+      transform: translateY(-50%);
+      z-index: 1;
+    }
 
     .card-img-top {
-      width: 90%;
-      margin: 0 auto;
+      width: calc(100% - 60px);
+      margin: 0 auto !important;
       position: relative;
-      border-radius: 8px;
+      border-radius: 20px;
       overflow: hidden;
 
       img {
-        height: auto;
+        width: 100%;
         object-fit: cover;
       }
 
@@ -22,7 +48,6 @@
         left: 2rem;
         color: var(--bs-paragraph-color, #666);
         font-size: 14px;
-        ;
 
         span {
           background-color: #fff;
@@ -35,9 +60,11 @@
     }
 
     .card-body {
-      padding: 1rem;
-      padding-top: 150px;
-      border: 1px solid #e9ecef;
+      padding: 0px 30px 30px 30px;
+      padding-top: 33%;
+      border: 2px solid var(--bs-border-color);
+      border-radius: 20px;
+      text-align: left;
 
       .card-meta {
         font-size: 0.875rem;
@@ -46,31 +73,24 @@
         .meta-item {
           display: flex;
           align-items: center;
+
+          i {
+            color: var(--bs-primary-color);
+          }
         }
       }
 
       .card-title {
-        font-size: 1.125rem;
-        font-weight: 600;
-        margin-bottom: 0.75rem;
-        color: #212529;
+        margin-bottom: 30px;
       }
+    }
 
-      .read-more {
-        font-size: 0.875rem;
-        color: #007bff;
-        text-decoration: none;
-        font-weight: 500;
-
-        i {
-          margin-left: 0.25rem;
-        }
-
-        &:hover {
-          text-decoration: underline;
-        }
+    &:hover {
+      .card-body {
+        border: 2px solid var(--bs-primary-color);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
       }
     }
   }
-
 }

@@ -124,7 +124,8 @@ button:focus {
 
   transition: background-color 0.3s ease;
   font-size: 16px;
-  i{
+
+  i {
     font-size: 12px;
   }
 
@@ -134,14 +135,16 @@ button:focus {
   }
 
 }
+
 .hover-white:hover {
   background-color: var(--bs-white-color) !important;
   color: var(--bs-black-color) !important;
 }
 
-.gap-30{
-gap: 30px;
+.gap-30 {
+  gap: 30px;
 }
+
 ul,
 ol {
   margin: 0;
@@ -253,6 +256,7 @@ p {
 .mb-40 {
   margin-bottom: 40px;
 }
+
 .mt-60 {
   margin-top: 60px !important;
 }
@@ -261,12 +265,28 @@ p {
   margin-bottom: 60px !important;
 }
 
+.mt-80 {
+  margin-top: 80px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
 .mt-120 {
   margin-top: 120px;
 }
 
 .mb-120 {
   margin-top: 120px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
 }
 
 .pt-120 {
@@ -298,13 +318,31 @@ p {
 
 .heading-style2 {
   font-size: clamp(24px, 2vw + 1rem, 48px);
-  font-weight: 700;
   margin-bottom: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 58px;
   color: var(--bs-black-color);
 }
+
+.heading-style4 {
+  font-size: clamp(24px, 1.7vw, 38px);
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0%;
+  color: var(--bs-black-color);
+}
+
+.heading-style5 {
+  font-size: clamp(16px, 1.7vw, 24px);
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 0%;
+  color: var(--bs-black-color);
+}
+
 
 .description {
   color: var(--bs-paragraph-color);
@@ -391,28 +429,57 @@ p {
   margin-left: 10%;
 
   .happy-client {
-      justify-content: center;
-      align-items: center;
+    justify-content: center;
+    align-items: center;
 
-      p {
-          color: var(--bs-primary-color);
-          font-weight: 600;
-          font-size: 48px;
-          line-height: 48px;
-      }
+    p {
+      color: var(--bs-primary-color);
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 48px;
+    }
 
-      span {
-          font-size: 16px;
-          color: var(--bs-paragraph-color);
-      }
+    span {
+      font-size: 16px;
+      color: var(--bs-paragraph-color);
+    }
   }
 }
-.d-card{
-  &.cwu{
+
+.d-card {
+  &.cwu {
     padding: 20px 30px;
   }
-
 }
+
+/* back to top button */
+.scroll-to-top {
+  background: var(--bs-primary-color);
+  width: 40px;
+  height: 40px;
+  color: var(--bs-white-color);
+  border-radius: 5px;
+  border: 0;
+  bottom: -45px;
+  right: 24px;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 15px;
+  z-index: 99;
+  cursor: pointer;
+  transition: var(--bs-transition);
+
+  &:hover {
+    background-color: var(--bs-secondary-color);
+  }
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  bottom: 24px;
+}
+
 /* Spin animation */
 @keyframes spin {
   from {

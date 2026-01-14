@@ -29,23 +29,28 @@
 	});
 
 	// video popup js
-	$('.vidplay').magnificPopup({
-		type: 'iframe',
-		iframe: {
-			markup: '<div class="mfp-iframe-scaler">' +
-				'<div class="mfp-close"></div>' +
-				'<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-				'</div>',
-			patterns: {
-				youtube: {
-					index: 'youtube.com/',
-					id: 'v=',
-					src: 'https://www.youtube.com/embed/%id%?autoplay=1'
-				},
-			},
-			srcAction: 'iframe_src',
-		}
-	});
+$('.vidplay').magnificPopup({
+  type: 'iframe',
+  iframe: {
+    markup: '<div class="mfp-iframe-scaler">' +
+              '<div class="mfp-close"></div>' +
+              '<iframe class="mfp-iframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+            '</div>',
+    patterns: {
+      youtube: {
+        index: 'youtu.be/', // detect short links
+        id: function(url) {
+          // extract video ID from youtu.be/E3FBeBRgq-c
+          var m = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+          return m ? m[1] : null;
+        },
+        src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+      }
+    },
+    srcAction: 'iframe_src'
+  }
+});
+
 
 	// Project horizontal scroll js
 	let horizontalSection = document.querySelector('.horizontal-scroll');
@@ -130,7 +135,7 @@
 	};
 
 	// // Service slider js
-	$(".service-slider").slick({
+	$(".our-doctors-slider").slick({
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplay: true,
@@ -138,8 +143,8 @@
 		infinite: true,
 		arrows: true,
 		speed: 500,
-		prevArrow: `<i class="fas arrow arrow-prev fa-arrow-left"></i>`,
-		nextArrow: `<i class="fas arrow arrow-next fa-arrow-right"></i>`,
+		prevArrow: $('.custom-prev'),
+		nextArrow: $('.custom-next'),
 		responsive: [{
 				breakpoint: 992,
 				settings: {
@@ -147,7 +152,7 @@
 				}
 			},
 			{
-				breakpoint: 576,
+				breakpoint: 768,
 				settings: {
 					slidesToShow: 1,
 				}
@@ -167,25 +172,26 @@
 		prevArrow: `<i class="fas arrow arrow-prev fa-arrow-left"></i>`,
 		nextArrow: `<i class="fas arrow arrow-next fa-arrow-right"></i>`,
 		responsive: [{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 2,
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+				}
 			}
-		},
-		{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-			}
-		}]
+		]
 	});
 
 	// // Testimonial slider js
 	$(".testimonial-slider").slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		autoplay: true,
-		dots: false,
+		autoplay: false,
+		dots: true,
 		infinite: true,
 		arrows: false,
 		speed: 500,
@@ -214,19 +220,20 @@
 		prevArrow: `<i class="fa-solid arrows arrow-prev fa-arrow-left"></i>`,
 		nextArrow: `<i class="fa-solid arrows arrow-next fa-arrow-right"></i>`,
 		responsive: [{
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 2,
-				arrows:false,
+				breakpoint: 992,
+				settings: {
+					slidesToShow: 2,
+					arrows: false,
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					arrows: false,
+				}
 			}
-		},
-		{
-			breakpoint: 768,
-			settings: {
-				slidesToShow: 1,
-				arrows:false,
-			}
-		}]
+		]
 	});
 
 	// // Image reveal js
