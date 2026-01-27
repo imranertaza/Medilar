@@ -1,0 +1,47 @@
+.custom-details-card.tags-card {
+
+  .card-list {
+    gap: 15px !important;
+  }
+
+
+  .item-label {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+  }
+}
+
+.pdp {
+
+  .social-icons {
+    gap: 10px !important;
+    margin: 0 auto;
+
+    .social-icon {
+      background: #F2F2F2 !important;
+      height: 40px !important;
+      width: 40px !important;
+
+      span {
+        svg {
+          width: 16px;
+          height: 16px;
+          display: inline-block;
+        }
+      }
+
+      &:hover {
+        background-color: #0A6847 !important;
+
+        span {
+          svg {
+            path {
+              fill: #fff !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../components/need_help.scss";
+
+ul.custom-list {
+  list-style: none;
+  /* remove default bullets */
+  padding-left: 0;
+}
+
+ul.custom-list li {
+  position: relative;
+  padding-left: 24px;
+  /* space for icon */
+  margin-bottom: 20px;
+}
+
+ul.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  /* match your SVG width */
+  height: 14px;
+  /* match your SVG height */
+  background: url('../img/services/details/listicon.png') no-repeat center center;
+  background-size: contain;
+}

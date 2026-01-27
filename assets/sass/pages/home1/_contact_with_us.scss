@@ -1,0 +1,113 @@
+.contact-with-us-h {
+    margin-bottom: -300px;
+
+    .d-card {
+        box-shadow: 0px 0px 60px 0px #0000000D;
+        background-color: #FFFFFF1A;
+
+        .experience-title {
+            font-size: 24px;
+        }
+    }
+
+    .contact-form-section {
+        background-color: var(--bs-white);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+        top: 50%;
+        width: 50%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width: 980px) {
+            position: static !important;
+            width: 100% !important;
+            margin-top: 30px;
+        }
+
+        label {
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--bs-border-color);
+            background-color: transparent;
+            border-radius: 999px;
+            font-size: 18px;
+            margin-bottom: 16px;
+            transition: border-color 0.3s ease;
+            color: var(--bs-paragraph-color);
+
+            &:focus {
+                border-color: var(--bs-border-color);
+
+            }
+
+            &::placeholder,
+            &::placeholder {
+                opacity: 1;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+            border-radius: 30px;
+        }
+
+        .from-group2 {
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                color: var(--bs-paragraph-color);
+                background-image: url('../img/why-chose-us/angle-down.png') !important;
+                background-size: 80%;
+            }
+
+            input[type="date"] {
+                padding-right: 0px;
+            }
+        }
+
+        input[type="date"]::placeholder {
+            // color: var(--bs-paragraph-color);
+            opacity: 0.6;
+            /* ensures full color visibility */
+        }
+
+        .btn-appointment {
+            width: 100%;
+            display: inline-block;
+            padding: 14px;
+            color: var(--bs-white-color) !important;
+            background-color: var(--bs-primary-color) !important;
+            color: var(--bs-black-color);
+            font-weight: 600;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #084b33;
+            }
+        }
+
+    }
+
+    @media screen and (max-width: 980px) {
+        .image-contact-with-us {
+            display: none;
+        }
+
+        .contact-form-section {
+            top: auto;
+            width: auto;
+            transform: unset;
+        }
+    }
+
+}

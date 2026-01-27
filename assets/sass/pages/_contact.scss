@@ -1,0 +1,73 @@
+.contact-card {
+  padding: 20px 0px 20px 32px;
+
+  .icon-container {
+    height: 65px;
+    width: 65px;
+    background: #F2F2F2 !important;
+    font-size: 24px;
+    color: var(--bs-primary-color);
+  }
+
+  h4 {
+    margin-bottom: 10px;
+  }
+}
+
+.contact-with-us-h.contact-page {
+  margin-bottom: 0px;
+
+  .contact-image {
+    background: url('../img/contact/bg.png') no-repeat left 10%;
+
+    .d-card {
+      padding: 30px 40px;
+      bottom: 12%;
+      box-shadow: 0px 0px 60px 0px #0000000D;
+
+      h2 {
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--bs-paragraph-color);
+      }
+    }
+  }
+
+  .d-card {
+    box-shadow: 0px 0px 60px 0px #0000000D;
+    background-color: #FFFFFF1A;
+
+    .experience-title {
+      font-size: 24px;
+    }
+  }
+
+  .contact-form-section {
+    background-color: var(--bs-white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    transform: translateY(0%);
+
+    .heading-style2 {
+      margin-bottom: 40px;
+    }
+
+    input,
+    select,
+    textarea {
+      padding: 15px 30px;
+    }
+
+    textarea {
+      min-height: 149px;
+    }
+  }
+
+
+}

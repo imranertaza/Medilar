@@ -1,0 +1,21 @@
+.work-process.home {
+  background-image: url('../img/home1/work-process/bg-1.png'), url('../img/home1/work-process/bg.png'),
+    linear-gradient(180deg, #0A6847 0%, #00925E 100%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 15% 85%, center, center;
+  background-size: auto, cover, cover;
+
+  .service-item-h {
+    margin-top: 40px;
+    padding: 30px;
+    padding-top: 60px;
+    border-color: #D0D0D033;
+
+    .icon-container-h {
+      top: -40px;
+      width: 80px;
+      height: 80px;
+      background: #227759;
+    }
+  }
+}

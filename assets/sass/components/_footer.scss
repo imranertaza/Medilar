@@ -6,9 +6,10 @@
   background: var(--bs-black-color) url("../img/footer/Isolation_Mode.png") no-repeat center center;
   background-size: cover;
   color: var(--bs-white-color);
-a{
-  color: var(--bs-white-color);
-}
+
+  a {
+    color: var(--bs-white-color);
+  }
 
   .footer-contact {
     li {
@@ -18,6 +19,7 @@ a{
 
       span {
         &:first-child {
+          border: 1px solid #d0d0d075;
           height: 40px;
           width: 40px;
         }
@@ -89,6 +91,10 @@ a{
       }
 
       ;
+
+      &:hover {
+        background: var(--bs-primary-color);
+      }
     }
   }
 }

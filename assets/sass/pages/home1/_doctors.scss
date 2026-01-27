@@ -1,0 +1,57 @@
+.related-doctors.home {
+  padding-top: 0px;
+}
+
+.related-doctors-h1 {
+  .our-doctors-home1-slider {
+
+    .slick-track {
+      display: flex !important;
+      gap: 30px;
+    }
+
+    .slick-slide {
+      margin: 0 !important;
+    }
+  }
+
+  .doctors-card {
+    text-align: center;
+    border-radius: 20px;
+    padding-bottom: 40px;
+    box-shadow: 0px 0px 20px 0px #0000000D;
+    width: 100%;
+
+    .social-icon-light-with-bg {
+      color: black;
+
+      &:hover {
+        color: var(--bs-white) !important;
+        background: var(--bs-primary-color) !important;
+      }
+    }
+
+
+    .image-container {
+      padding: 50px 0px 20px 0px;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+
+    .bg-1 {
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      height: 40%;
+      width: 100%;
+      background: #0A684733 !important;
+    }
+  }
+
+  .social-icon {
+    background: #F2F2F2 !important;
+    color: var(--bs-black-color) !important;
+    margin-bottom: 20px;
+  }
+}

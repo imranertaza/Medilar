@@ -1,5 +1,6 @@
 .contact-with-us {
-background: var(--bs-black-color) url("../img/contact-us/bg.png") no-repeat bottom left;
+    background: var(--bs-black-color) url("../img/contact-us/bg.png") no-repeat bottom left;
+
     p {
         color: white !important;
     }
@@ -73,8 +74,10 @@ background: var(--bs-black-color) url("../img/contact-us/bg.png") no-repeat bott
             border-radius: 30px;
         }
 
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            background-image: url('../img/why-chose-us/angle-down.svg');
+        .from-group1 {
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                background-image: url('../img/why-chose-us/angle-down.svg');
+            }
         }
 
         .btn-appointment {
