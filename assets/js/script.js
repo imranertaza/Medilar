@@ -29,27 +29,27 @@
 	});
 
 	// video popup js
-$('.vidplay').magnificPopup({
-  type: 'iframe',
-  iframe: {
-    markup: '<div class="mfp-iframe-scaler">' +
-              '<div class="mfp-close"></div>' +
-              '<iframe class="mfp-iframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
-            '</div>',
-    patterns: {
-      youtube: {
-        index: 'youtu.be/', // detect short links
-        id: function(url) {
-          // extract video ID from youtu.be/E3FBeBRgq-c
-          var m = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
-          return m ? m[1] : null;
-        },
-        src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
-      }
-    },
-    srcAction: 'iframe_src'
-  }
-});
+	$('.vidplay').magnificPopup({
+		type: 'iframe',
+		iframe: {
+			markup: '<div class="mfp-iframe-scaler">' +
+				'<div class="mfp-close"></div>' +
+				'<iframe class="mfp-iframe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+				'</div>',
+			patterns: {
+				youtube: {
+					index: 'youtu.be/', // detect short links
+					id: function (url) {
+						// extract video ID from youtu.be/E3FBeBRgq-c
+						var m = url.match(/youtu\.be\/([a-zA-Z0-9_-]+)/);
+						return m ? m[1] : null;
+					},
+					src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+				}
+			},
+			srcAction: 'iframe_src'
+		}
+	});
 
 
 	// Project horizontal scroll js
@@ -380,6 +380,28 @@ $('.vidplay').magnificPopup({
 		}
 	});
 
+
+	document.addEventListener("DOMContentLoaded", function () {
+		document.querySelectorAll(".progress-bar").forEach(function (bar) {
+			let target = parseInt(bar.getAttribute("aria-valuenow"), 10);
+			let label = bar.querySelector(".progress-label");
+
+			// Animate bar width
+			bar.style.width = target + "%";
+
+			// Animate label count-up
+			let current = 0;
+			let step = Math.ceil(target / 30); // adjust speed (30 steps)
+			let interval = setInterval(() => {
+				current += step;
+				if (current >= target) {
+					current = target;
+					clearInterval(interval);
+				}
+				label.textContent = current + "%";
+			}, 50); // update every 50ms
+		});
+	});
 	// ===================================
 	// ===================================
 	// ===================================

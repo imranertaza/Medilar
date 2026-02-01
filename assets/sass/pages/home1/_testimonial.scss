@@ -51,9 +51,20 @@
       padding: 30px 40px;
       border-radius: 20px;
 
+      &:hover {
+        border-color: var(--bs-primary-color);
+        transition: transform 0.3s ease;
+
+        .stars {
+          transform: translateY(-5px);
+          transition: transform 0.3s ease;
+        }
+      }
+
       .stars {
         color: #F8BC26;
         margin-bottom: 15px;
+        transition: transform 0.3s ease;
 
         .unmarked {
           color: #D0D0D0;

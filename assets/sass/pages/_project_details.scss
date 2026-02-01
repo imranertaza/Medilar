@@ -17,11 +17,19 @@
   .social-icons {
     gap: 10px !important;
     margin: 0 auto;
+    
+    a {
+      padding: 0px !important;
+    }
 
     .social-icon {
       background: #F2F2F2 !important;
       height: 40px !important;
       width: 40px !important;
+
+      i {
+        color: #333 !important;
+      }
 
       span {
         svg {
@@ -33,6 +41,10 @@
 
       &:hover {
         background-color: #0A6847 !important;
+
+        i {
+          color: var(--bs-white-color) !important;
+        }
 
         span {
           svg {

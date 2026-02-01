@@ -1,7 +1,8 @@
 .why-chose-section {
     background-color: #F2F2F2;
     padding-top: 120px;
-    padding-bottom: 278px;
+    padding-bottom: 350px;
+    margin-bottom: calc(350px - 120px);
 
     .first-part {
         background: url('../img/why-chose-us/bg-dots.png') no-repeat right top;
@@ -20,62 +21,62 @@
 
         @media screen and (max-width:980px) {
             img:nth-child(2) {
-            position: absolute;
-            width: 36%;
-            right: 0;
-            bottom: 33%;
-        }
-            }
-
-            //     height: 100%;
-
-            //     .first-image {
-            //         margin-top: 5%;
-            //     }
-
-
-        }
-
-        .progress-group {
-            margin-top: 32px;
-
-            .progress-item {
-                margin-bottom: 30px;
-
-                .progress {
-                    margin-top: 11px;
-                    height: 5px; // Slim progress bar
-                    border-radius: 5px;
-                    overflow: hidden;
-                }
-
-                .progress-bar {
-                    font-size: 0; // Hide text inside bar
-                    line-height: 5px;
-                }
+                position: absolute;
+                width: 36%;
+                right: 0;
+                bottom: 33%;
             }
         }
 
-        #player {
-            border-radius: 20px !important;
-            overflow: hidden;
-        }
+        //     height: 100%;
 
-        #videoContainer {
-            max-height: 453px;
-            bottom: -20%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+        //     .first-image {
+        //         margin-top: 5%;
+        //     }
 
-        @media screen and (max-width: 768px) {
-            padding-bottom: 100px;
 
-            #videoContainer {
-                position: static !important;
-                transform: none !important;
-                padding-top: 48px;
+    }
+
+    .progress-group {
+        margin-top: 32px;
+
+        .progress-item {
+            margin-bottom: 30px;
+
+            .progress {
+                margin-top: 11px;
+                height: 5px; // Slim progress bar
+                border-radius: 5px;
+                overflow: hidden;
             }
 
+            .progress-bar {
+                font-size: 0; // Hide text inside bar
+                line-height: 5px;
+            }
         }
     }
+
+    #player {
+        border-radius: 20px !important;
+        overflow: hidden;
+    }
+
+    #videoContainer {
+        max-height: 453px;
+        bottom: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @media screen and (max-width: 768px) {
+        padding-bottom: 100px;
+
+        #videoContainer {
+            position: static !important;
+            transform: none !important;
+            padding-top: 48px;
+        }
+
+    }
+}

@@ -336,7 +336,8 @@ p {
   color: var(--bs-black-color);
   font-size: 74px;
   font-weight: 700;
-  line-height: 84px;
+  // line-height: 84px;
+  line-height: 3lh;
   letter-spacing: -1.48px;
 }
 
@@ -345,7 +346,9 @@ p {
   margin-bottom: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 58px;
+  // line-height: 58px;
+  line-height: 1.5lh;
+
   color: var(--bs-black-color);
 }
 
@@ -353,7 +356,9 @@ p {
   font-size: clamp(24px, 1.7vw, 38px);
   margin-bottom: 20px;
   font-weight: 600;
-  line-height: 34px;
+  // line-height: 34px;
+  line-height: 1.5lh;
+
   letter-spacing: 0%;
   color: var(--bs-black-color);
 }
@@ -362,7 +367,9 @@ p {
   font-size: clamp(16px, 1.5vw, 24px);
   margin-bottom: 20px;
   font-weight: 600;
-  line-height: 34px;
+  // line-height: 34px;
+  line-height: 1.2lh;
+
   letter-spacing: 0%;
   color: var(--bs-black-color);
 }
@@ -371,11 +378,23 @@ p {
   font-size: clamp(16px, 1.5vw, 22px);
   margin-bottom: 20px;
   font-weight: 600;
-  line-height: 23px;
+  // line-height: 23px;
+  line-height: 1.2lh;
   letter-spacing: 0%;
   color: var(--bs-black-color);
 }
 
+@media screen and (max-width:768px) {
+
+  .heading-style1,
+  .heading-style2,
+  .heading-style3,
+  .heading-style4,
+  .heading-style5,
+  .heading-style6 {
+    margin-bottom: 16px;
+  }
+}
 
 .description {
   color: var(--bs-paragraph-color);
@@ -391,7 +410,6 @@ p {
   font-style: normal;
   font-weight: 700;
   line-height: 17px;
-  /* 121.429% */
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -517,6 +535,13 @@ p {
   }
 }
 
+.progress-bar {
+  width: 0;
+  /* start collapsed */
+  transition: width 1.5s ease-in-out;
+  /* smooth animation */
+}
+
 .scroll-to-top.show {
   opacity: 1;
   visibility: visible;
@@ -564,6 +589,7 @@ p {
     padding: 24px;
 
     .card-list a {
+      font-size: 14px;
       padding: 12px 24px;
     }
   }
@@ -574,7 +600,17 @@ p {
     padding: 20px;
 
     .card-list a {
+      font-size: 14px;
       padding: 12px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .custom-details-card {
+
+    .card-list a {
+      font-size: 13px;
     }
   }
 }
@@ -628,6 +664,15 @@ p {
 .shadow-0 {
   box-shadow: none !important;
 }
+
+.flip-up {
+  transition: transform 0.3s ease; // smooth animation
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
 
 /* Spin animation */
 @keyframes spin {

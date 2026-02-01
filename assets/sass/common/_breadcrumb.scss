@@ -4,6 +4,10 @@
   .breadcrumb-content {
     padding: 126px 0 130px 0;
 
+    @media screen and (max-width:768px) {
+      padding: 60px 0;
+    }
+
     .breadcrumb-item+.breadcrumb-item::before {
       /* The Unicode for fa-angle-right */
       content: "\f105";
