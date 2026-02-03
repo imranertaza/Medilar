@@ -346,9 +346,7 @@ p {
   margin-bottom: 20px;
   font-style: normal;
   font-weight: 600;
-  // line-height: 58px;
-  line-height: 1.5lh;
-
+  line-height: 58px;
   color: var(--bs-black-color);
 }
 
@@ -393,6 +391,7 @@ p {
   .heading-style5,
   .heading-style6 {
     margin-bottom: 16px;
+    line-height: 1.3lh;
   }
 }
 
@@ -428,6 +427,20 @@ p {
   width: 100%;
   height: 100%;
   overflow: hidden !important;
+}
+@keyframes customFadeInLeft {
+  from {
+    transform: translateX(-80px); /* start 80px left */
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate__customFadeInLeft {
+  animation: customFadeInLeft 1s ease-out forwards;
 }
 
 /* Form input css */

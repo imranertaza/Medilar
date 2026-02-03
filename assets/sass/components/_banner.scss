@@ -4,6 +4,7 @@
 /* Banner */
 .cm-banner-section {
   background: #F2F2F2;
+  height: 100vh;
 
   h5 {
     font-size: 1rem;
@@ -36,6 +37,11 @@
     }
   }
 
+  .doctor-image {
+    top: -8px;
+    left: 30px;
+  }
+
   .total-client {
     color: var(--Gray-900, #181818);
     font-feature-settings: 'liga'off, 'clig'off;
@@ -54,8 +60,45 @@
   }
 }
 
+
+@media screen and (max-width: 1200px) {
+  .cm-banner-section {
+    height: 900px;
+  }
+
+  .doctor-image {
+    top: -20px !important;
+    left: 22px !important;
+  }
+}
+
 @media screen and (max-width: 767px) {
-  .cm-banner-section p {
-    width: 100%;
+  .cm-banner-section {
+    height: 1000px;
+
+    .doctor-image {
+      top: -15px;
+      left: 20px;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .cm-banner-section {
+    height: 850px;
+
+    .doctor-image {
+      top: -15px;
+      left: 18px;
+    }
+
+    p {
+      width: 100%;
+
+    }
   }
 }

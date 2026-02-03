@@ -51,6 +51,7 @@
 		}
 	});
 
+	
 
 	// Project horizontal scroll js
 	let horizontalSection = document.querySelector('.horizontal-scroll');
@@ -133,6 +134,33 @@
 			});
 		});
 	};
+	document.addEventListener("DOMContentLoaded", function () {
+		// Background image rotate in
+		gsap.fromTo(".bg-image", {
+			rotate: 45,
+			opacity: 0
+		}, {
+			rotate: 0,
+			opacity: 1,
+			duration: 2,
+			ease: "power3.out"
+		});
+
+		// Doctor image slide down smoothly
+		gsap.fromTo(".doctor-image", {
+				y: -50,
+				// opacity: 0
+			}, // start 80px above, hidden
+			{
+				y: 0,
+				opacity: 1,
+				duration: 1,
+				ease: "power3.out",
+				delay: 0.2
+			} // slide down into place
+		);
+	});
+
 
 	// // Service slider js
 	$(".our-doctors-slider").slick({
@@ -280,6 +308,27 @@
 			$(this).html(countNumber);
 		});
 	});
+	$(document).ready(function () {
+		$('.counter').each(function () {
+			const $this = $(this);
+			const target = parseInt($this.attr('data-count'), 10);
+			let current = 0;
+			const duration = 2000; // total animation time in ms
+			const stepTime = 30; // update every 30ms
+			const steps = Math.ceil(duration / stepTime);
+			const increment = Math.ceil(target / steps);
+
+			const counterInterval = setInterval(function () {
+				current += increment;
+				if (current >= target) {
+					current = target;
+					clearInterval(counterInterval);
+				}
+				$this.text(current.toLocaleString()); // adds comma formatting
+			}, stepTime);
+		});
+	});
+
 
 	// Team move and active js
 	var team_item = gsap.utils.toArray('.team-item');
@@ -405,4 +454,5 @@
 	// ===================================
 	// ===================================
 	// ===================================
+
 })(jQuery);
