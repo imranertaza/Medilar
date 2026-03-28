@@ -1,3 +1,102 @@
-.contact-with-us{
-    background: var(--bs-black-color);
+.contact-with-us {
+    background: var(--bs-black-color) url("../img/contact-us/bg.png") no-repeat bottom left;
+
+    p {
+        color: white !important;
+    }
+
+    span {
+        color: white !important;
+    }
+
+    .d-card {
+        box-shadow: 0px 0px 60px 0px #0000000D;
+        background-color: #FFFFFF1A;
+
+        .experience-title {
+            font-size: 24px;
+        }
+    }
+
+    .contact-form-section {
+        background-color: var(--bs-primary-color);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+
+        @media screen and (max-width: 980px) {
+            padding: 30px;
+            position: static !important;
+            width: 100% !important;
+            margin-top: 30px;
+        }
+
+        h2 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        label {
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #FFFFFF;
+            background-color: transparent;
+            border-radius: 999px;
+            font-size: 18px;
+            margin-bottom: 30px;
+            transition: border-color 0.3s ease;
+            color: white;
+
+            &:focus {
+                border-color: #FFFFFF;
+
+            }
+
+            &::placeholder,
+            &::placeholder {
+                color: #fff;
+                opacity: 1;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+            border-radius: 30px;
+        }
+
+        .from-group1 {
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                background-image: url('../img/why-chose-us/angle-down.svg');
+            }
+        }
+
+        .btn-appointment {
+            display: inline-block;
+            padding: 14px;
+            background-color: #FFFFFF !important;
+            color: var(--bs-black-color);
+            font-weight: 600;
+            border: 1px solid #D0D0D0;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #faefefe5;
+            }
+        }
+
+    }
+
 }

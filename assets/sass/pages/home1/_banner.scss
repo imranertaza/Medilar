@@ -1,0 +1,26 @@
+.banner-section {
+  max-height: 860px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1860px;
+  border-radius: 52px;
+  overflow: hidden;
+  // max-width: 1360px;
+  background: url('../img/home1/banner/bg1.png') no-repeat center center, url('../img/home1/banner/bg2.png') no-repeat center center;
+  background-size: cover, cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .banner-title {
+    font-family: var(--bs-font-secondary) !important;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .banner-section {
+    background-size: cover;
+    border-radius: 32px;
+  }
+}

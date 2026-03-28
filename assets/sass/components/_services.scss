@@ -1,5 +1,4 @@
 .services-section {
-    padding: 120px 0;
     background-color: #fff;
 
     .services-heading {
@@ -33,18 +32,22 @@
                     stroke: var(--bs-white-color);
                 }
             }
-            .card-icon{
+
+            .card-icon {
                 background-color: var(--bs-primary-color);
+
                 svg {
                     path {
                         fill: var(--bs-white-color);
                     }
                 }
             }
-            .read-more-btn{
+
+            .read-more-btn {
                 background-color: var(--bs-primary-color);
                 color: #fff;
             }
+
             transform: translateY(-5px);
         }
 
@@ -71,7 +74,8 @@
             font-size: 27px;
             font-style: normal;
             font-weight: 700;
-            line-height: 37.8px; /* 140% */
+            line-height: 37.8px;
+            /* 140% */
             letter-spacing: -0.54px;
             color: var(--bs-paragraph-color);
         }
@@ -88,7 +92,8 @@
 
         .card-title {
             color: var(--bs-black-color);
-            font-size: clamp(18px, 2vw, 24px);            font-style: normal;
+            font-size: clamp(18px, 2vw, 24px);
+            font-style: normal;
             font-weight: 600;
             line-height: 34px;
             margin: 20px 0 40px 0;

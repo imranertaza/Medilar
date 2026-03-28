@@ -1,0 +1,44 @@
+  .health-service-card {
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #D0D0D0;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+
+    &:hover {
+      .icon {
+        svg {
+          transform: rotateZ(360deg);
+          transition: transform 0.6s ease;
+        }
+      }
+    }
+
+    .icon {
+      svg {
+        transition: transform 0.6s ease;
+      }
+
+      width: 80px;
+      height: 80px;
+      background: #F2F2F2;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .btn-read {
+      background: #227759;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+
+      &:hover {
+        background: #0A6847;
+      }
+    }
+  }

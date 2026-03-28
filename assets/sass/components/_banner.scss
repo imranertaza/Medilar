@@ -18,7 +18,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: clamp(32px, 4.5vw + 2rem, 88.186px)
-  } 
+  }
 
   p {
     font-size: 16px;
@@ -40,7 +40,7 @@
     color: var(--Gray-900, #181818);
     font-feature-settings: 'liga'off, 'clig'off;
     /* Heading/H3 */
-    font-family: Outfit;
+    font-family: Outfit sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -52,12 +52,10 @@
     color: var(--Gray-600, #666666);
     font-size: 14px;
   }
-
 }
 
 @media screen and (max-width: 767px) {
   .cm-banner-section p {
     width: 100%;
   }
-  
 }

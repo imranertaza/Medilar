@@ -1,16 +1,12 @@
-@import "./common/common";
-@import "./components/background";
-@import "./components/buttons";
-@import "./components/_icon_box";
-@import "./components/_banner";
-@import "./components/_services";
-@import "./components/about";
-@import "./components/_work_process";
-@import "./components/gallery";
-@import "./components/_why _chose_us.scss";
-@import "./components/_related-doctors.scss";
-@import "./components/_contact_with_us.scss";
-@import "./pages/home";
-
-
-
+@import "./common/_common.scss";
+@import "./components/_background.scss";
+@import "./components/_buttons.scss";
+@import "./components/_icon_box.scss";
+@import "./pages/_home.scss";
+@import "./pages/_home1.scss";
+@import "./pages/about";
+@import "./pages/service_details";
+@import "./pages/project_details";
+@import "./pages/doctors_details";
+@import "./pages/blogs";
+@import "./pages/contact";
